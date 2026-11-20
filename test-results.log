@@ -1,0 +1,106 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< com.wolinski:dapr-vs-temporal-workflow-chaos >------------
+[INFO] Building dapr-vs-temporal-workflow-chaos 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] skip non existing resourceDirectory /src/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 15 source files with javac [debug release 25] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 17 source files with javac [debug release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.wolinski.chaos.StoreOpsTest
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/root/.m2/repository/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by com.google.protobuf.UnsafeUtil$MemoryAccessor (file:/root/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.protobuf.UnsafeUtil$MemoryAccessor
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+STORE Dapr     redis-commands    1 steps: 84, 41 steps: 1644 -> 39.0 per step
+STORE Temporal sql-statements    1 steps: 85, 41 steps: 1373 -> 32.2 per step
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.85 s -- in com.wolinski.chaos.StoreOpsTest
+[INFO] Running com.wolinski.chaos.SmokeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.33 s -- in com.wolinski.chaos.SmokeTest
+[INFO] Running com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-crash                           Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=2.030412751]
+RESULT Temporal temporal-crash                       Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=9.680552088]
+RESULT Dapr     dapr-long-cut                        Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.143986544]
+RESULT Temporal temporal-long-cut                    Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=2.690370252]
+RESULT Dapr     dapr-drained-deploy                  Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0]
+RESULT Temporal temporal-blip                        Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.247457209]
+RESULT Dapr     dapr-short-cut                       Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=4.042241501]
+RESULT Temporal temporal-short-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.2069985]
+RESULT Dapr     dapr-hung                            Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.081016792]
+RESULT Temporal temporal-hung                        Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.242230292]
+RESULT Dapr     dapr-sidecar-restart                 Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=3.33895146]
+RESULT Dapr     dapr-blip                            Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.034403295]
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.0844555]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.513916542]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.058364583]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.142699916]
+RESULT Dapr     dapr-deploy                          Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=0]
+RESULT Temporal temporal-deploy                      Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0]
+RESULT Dapr     dapr-short-blackhole                 Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.140724752]
+RESULT Temporal temporal-short-blackhole             Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.153468917]
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 185.1 s -- in com.wolinski.chaos.ChaosTest
+[INFO] Running com.wolinski.chaos.RemedyTest
+RESULT Dapr     safe-dapr-blip                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=5.049248835]
+RESULT Dapr     safe-dapr-crash                      Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.01139525]
+RESULT Temporal safe-temporal-crash                  Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=6.375496836]
+RESULT Temporal safe-temporal-long-cut               Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.282944209]
+RESULT Dapr     dapr-compensation-outage             Result[outcome=cancelled, charges=1, refunds=1, recoverySeconds=0]
+RESULT Temporal temporal-compensation-outage         Result[outcome=cancelled, charges=1, refunds=1, recoverySeconds=0]
+RESULT Temporal late-temporal-hung                   Result[outcome=cancelled, charges=1, refunds=1, recoverySeconds=0.609003834]
+LATE outcome=cancelled charges=1 refunds=1
+RESULT Dapr     safe-dapr-deploy                     Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0]
+RESULT Temporal heartbeat-crash                      Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=6.286450378]
+RESULT Temporal sticky-crash                         Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.340790626]
+RESULT Dapr     puzzle-naive                         Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.013713416]
+RESULT Dapr     puzzle-safe                          Result[outcome=cancelled, charges=1, refunds=1, recoverySeconds=0.699239375]
+RESULT Temporal safe-temporal-hung                   Result[outcome=cancelled, charges=1, refunds=1, recoverySeconds=0.010318209]
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 162.5 s -- in com.wolinski.chaos.RemedyTest
+[INFO] Running com.wolinski.chaos.StepCostTest
+STEP Dapr     delay-on=none         ms/step=  11.16 round-trips/step=-
+STEP Dapr     delay-on=dapr-app     ms/step=  29.78 round-trips/step=1.86
+STEP Dapr     delay-on=dapr-store   ms/step=  54.89 round-trips/step=4.37
+STEP Temporal delay-on=none         ms/step=  26.74 round-trips/step=-
+STEP Temporal delay-on=temporal-app ms/step=  42.87 round-trips/step=1.61
+STEP Temporal delay-on=temporal-store ms/step= 780.30 round-trips/step=75.36
+STEP COST (median of 7, +5 ms each way on the named link)
+STEP Dapr     delay-on=none         ms/step=  11.16 round-trips/step=-
+STEP Dapr     delay-on=dapr-app     ms/step=  29.78 round-trips/step=1.86
+STEP Dapr     delay-on=dapr-store   ms/step=  54.89 round-trips/step=4.37
+STEP Temporal delay-on=none         ms/step=  26.74 round-trips/step=-
+STEP Temporal delay-on=temporal-app ms/step=  42.87 round-trips/step=1.61
+STEP Temporal delay-on=temporal-store ms/step= 780.30 round-trips/step=75.36
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 324.3 s -- in com.wolinski.chaos.StepCostTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12:11 min
+[INFO] Finished at: 2026-11-20T11:57:42Z
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,123 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< com.wolinski:dapr-vs-temporal-workflow-chaos >------------
+[INFO] Building dapr-vs-temporal-workflow-chaos 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] skip non existing resourceDirectory /src/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 12 source files with javac [debug release 25] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 12 source files with javac [debug release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.wolinski.chaos.ExploreTest
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/root/.m2/repository/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by com.google.protobuf.UnsafeUtil$MemoryAccessor (file:/root/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.protobuf.UnsafeUtil$MemoryAccessor
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+OBSERVED Dapr     worker-crash                  2000ms outcome=shipped    charges=2 recovery=5.2s ledger=[reserve:dapr-worker-crash-2000-r0, charge:dapr-worker-crash-2000-r0, charge:dapr-worker-crash-2000-r0, ship:dapr-worker-crash-2000-r0]
+OBSERVED Dapr     engine-restart                2000ms outcome=shipped    charges=2 recovery=8.7s ledger=[reserve:dapr-engine-restart-2000-r0, charge:dapr-engine-restart-2000-r0, charge:dapr-engine-restart-2000-r0, ship:dapr-engine-restart-2000-r0]
+OBSERVED Dapr     engine-restart-done-during    2000ms outcome=shipped    charges=2 recovery=7.4s ledger=[reserve:dapr-engine-restart-done-during-2000-r0, charge:dapr-engine-restart-done-during-2000-r0, charge:dapr-engine-restart-done-during-2000-r0, ship:dapr-engine-restart-done-during-2000-r0]
+OBSERVED Temporal worker-crash                  2000ms outcome=shipped    charges=2 recovery=14.0s ledger=[reserve:temporal-worker-crash-2000-r0, charge:temporal-worker-crash-2000-r0, charge:temporal-worker-crash-2000-r0, ship:temporal-worker-crash-2000-r0]
+OBSERVED Temporal engine-restart                2000ms outcome=shipped    charges=2 recovery=5.7s ledger=[reserve:temporal-engine-restart-2000-r0, charge:temporal-engine-restart-2000-r0, charge:temporal-engine-restart-2000-r0, ship:temporal-engine-restart-2000-r0]
+OBSERVED Temporal engine-restart-done-during    2000ms outcome=shipped    charges=2 recovery=5.2s ledger=[reserve:temporal-engine-restart-done-during-2000-r0, charge:temporal-engine-restart-done-during-2000-r0, charge:temporal-engine-restart-done-during-2000-r0, ship:temporal-engine-restart-done-during-2000-r0]
+OBSERVED Temporal app-link-cut                  2000ms outcome=shipped    charges=1 recovery=2.9s ledger=[reserve:temporal-app-link-cut-2000-r0, charge:temporal-app-link-cut-2000-r0, ship:temporal-app-link-cut-2000-r0]
+OBSERVED Temporal app-link-blackhole            2000ms outcome=shipped    charges=1 recovery=0.6s ledger=[reserve:temporal-app-link-blackhole-2000-r0, charge:temporal-app-link-blackhole-2000-r0, ship:temporal-app-link-blackhole-2000-r0]
+OBSERVED Temporal store-link-cut                2000ms outcome=shipped    charges=1 recovery=2.1s ledger=[reserve:temporal-store-link-cut-2000-r0, charge:temporal-store-link-cut-2000-r0, ship:temporal-store-link-cut-2000-r0]
+OBSERVED Temporal store-link-blackhole          2000ms outcome=shipped    charges=1 recovery=3.8s ledger=[reserve:temporal-store-link-blackhole-2000-r0, charge:temporal-store-link-blackhole-2000-r0, ship:temporal-store-link-blackhole-2000-r0]
+OBSERVED Temporal worker-crash                 10000ms outcome=shipped    charges=2 recovery=4.5s ledger=[reserve:temporal-worker-crash-10000-r0, charge:temporal-worker-crash-10000-r0, charge:temporal-worker-crash-10000-r0, ship:temporal-worker-crash-10000-r0]
+OBSERVED Temporal engine-restart               10000ms outcome=shipped    charges=2 recovery=14.7s ledger=[reserve:temporal-engine-restart-10000-r0, charge:temporal-engine-restart-10000-r0, charge:temporal-engine-restart-10000-r0, ship:temporal-engine-restart-10000-r0]
+OBSERVED Temporal engine-restart-done-during   10000ms outcome=shipped    charges=2 recovery=14.9s ledger=[reserve:temporal-engine-restart-done-during-10000-r0, charge:temporal-engine-restart-done-during-10000-r0, charge:temporal-engine-restart-done-during-10000-r0, ship:temporal-engine-restart-done-during-10000-r0]
+OBSERVED Temporal app-link-cut                 10000ms outcome=shipped    charges=2 recovery=2.9s ledger=[reserve:temporal-app-link-cut-10000-r0, charge:temporal-app-link-cut-10000-r0, charge:temporal-app-link-cut-10000-r0, ship:temporal-app-link-cut-10000-r0]
+OBSERVED Temporal app-link-blackhole           10000ms outcome=shipped    charges=2 recovery=1.5s ledger=[reserve:temporal-app-link-blackhole-10000-r0, charge:temporal-app-link-blackhole-10000-r0, charge:temporal-app-link-blackhole-10000-r0, ship:temporal-app-link-blackhole-10000-r0]
+OBSERVED Temporal store-link-cut               10000ms outcome=shipped    charges=2 recovery=6.0s ledger=[reserve:temporal-store-link-cut-10000-r0, charge:temporal-store-link-cut-10000-r0, charge:temporal-store-link-cut-10000-r0, ship:temporal-store-link-cut-10000-r0]
+OBSERVED Temporal store-link-blackhole         10000ms outcome=shipped    charges=1 recovery=3.3s ledger=[reserve:temporal-store-link-blackhole-10000-r0, charge:temporal-store-link-blackhole-10000-r0, ship:temporal-store-link-blackhole-10000-r0]
+OBSERVED Temporal worker-crash                  2000ms outcome=shipped    charges=2 recovery=9.2s ledger=[reserve:temporal-worker-crash-2000-r1, charge:temporal-worker-crash-2000-r1, charge:temporal-worker-crash-2000-r1, ship:temporal-worker-crash-2000-r1]
+OBSERVED Temporal engine-restart                2000ms outcome=shipped    charges=1 recovery=3.4s ledger=[reserve:temporal-engine-restart-2000-r1, charge:temporal-engine-restart-2000-r1, ship:temporal-engine-restart-2000-r1]
+OBSERVED Temporal engine-restart-done-during    2000ms outcome=shipped    charges=2 recovery=4.7s ledger=[reserve:temporal-engine-restart-done-during-2000-r1, charge:temporal-engine-restart-done-during-2000-r1, charge:temporal-engine-restart-done-during-2000-r1, ship:temporal-engine-restart-done-during-2000-r1]
+OBSERVED Temporal app-link-cut                  2000ms outcome=shipped    charges=1 recovery=1.4s ledger=[reserve:temporal-app-link-cut-2000-r1, charge:temporal-app-link-cut-2000-r1, ship:temporal-app-link-cut-2000-r1]
+OBSERVED Temporal app-link-blackhole            2000ms outcome=shipped    charges=1 recovery=0.4s ledger=[reserve:temporal-app-link-blackhole-2000-r1, charge:temporal-app-link-blackhole-2000-r1, ship:temporal-app-link-blackhole-2000-r1]
+OBSERVED Temporal store-link-cut                2000ms outcome=shipped    charges=1 recovery=2.1s ledger=[reserve:temporal-store-link-cut-2000-r1, charge:temporal-store-link-cut-2000-r1, ship:temporal-store-link-cut-2000-r1]
+OBSERVED Temporal store-link-blackhole          2000ms outcome=shipped    charges=1 recovery=0.1s ledger=[reserve:temporal-store-link-blackhole-2000-r1, charge:temporal-store-link-blackhole-2000-r1, ship:temporal-store-link-blackhole-2000-r1]
+OBSERVED Temporal worker-crash                 10000ms outcome=shipped    charges=2 recovery=1.3s ledger=[reserve:temporal-worker-crash-10000-r1, charge:temporal-worker-crash-10000-r1, charge:temporal-worker-crash-10000-r1, ship:temporal-worker-crash-10000-r1]
+OBSERVED Temporal engine-restart               10000ms outcome=shipped    charges=2 recovery=2.5s ledger=[reserve:temporal-engine-restart-10000-r1, charge:temporal-engine-restart-10000-r1, charge:temporal-engine-restart-10000-r1, ship:temporal-engine-restart-10000-r1]
+OBSERVED Temporal engine-restart-done-during   10000ms outcome=shipped    charges=2 recovery=4.7s ledger=[reserve:temporal-engine-restart-done-during-10000-r1, charge:temporal-engine-restart-done-during-10000-r1, charge:temporal-engine-restart-done-during-10000-r1, ship:temporal-engine-restart-done-during-10000-r1]
+OBSERVED Temporal app-link-cut                 10000ms outcome=shipped    charges=2 recovery=3.1s ledger=[reserve:temporal-app-link-cut-10000-r1, charge:temporal-app-link-cut-10000-r1, charge:temporal-app-link-cut-10000-r1, ship:temporal-app-link-cut-10000-r1]
+OBSERVED Temporal app-link-blackhole           10000ms outcome=shipped    charges=2 recovery=1.5s ledger=[reserve:temporal-app-link-blackhole-10000-r1, charge:temporal-app-link-blackhole-10000-r1, charge:temporal-app-link-blackhole-10000-r1, ship:temporal-app-link-blackhole-10000-r1]
+OBSERVED Temporal store-link-cut               10000ms outcome=shipped    charges=2 recovery=6.6s ledger=[reserve:temporal-store-link-cut-10000-r1, charge:temporal-store-link-cut-10000-r1, charge:temporal-store-link-cut-10000-r1, ship:temporal-store-link-cut-10000-r1]
+OBSERVED Temporal store-link-blackhole         10000ms outcome=shipped    charges=1 recovery=1.8s ledger=[reserve:temporal-store-link-blackhole-10000-r1, charge:temporal-store-link-blackhole-10000-r1, ship:temporal-store-link-blackhole-10000-r1]
+OBSERVED Temporal worker-crash                  2000ms outcome=shipped    charges=2 recovery=11.1s ledger=[reserve:temporal-worker-crash-2000-r2, charge:temporal-worker-crash-2000-r2, charge:temporal-worker-crash-2000-r2, ship:temporal-worker-crash-2000-r2]
+OBSERVED Temporal engine-restart                2000ms outcome=shipped    charges=1 recovery=4.8s ledger=[reserve:temporal-engine-restart-2000-r2, charge:temporal-engine-restart-2000-r2, ship:temporal-engine-restart-2000-r2]
+OBSERVED Temporal engine-restart-done-during    2000ms outcome=shipped    charges=2 recovery=6.9s ledger=[reserve:temporal-engine-restart-done-during-2000-r2, charge:temporal-engine-restart-done-during-2000-r2, charge:temporal-engine-restart-done-during-2000-r2, ship:temporal-engine-restart-done-during-2000-r2]
+OBSERVED Temporal app-link-cut                  2000ms outcome=shipped    charges=1 recovery=1.3s ledger=[reserve:temporal-app-link-cut-2000-r2, charge:temporal-app-link-cut-2000-r2, ship:temporal-app-link-cut-2000-r2]
+OBSERVED Temporal app-link-blackhole            2000ms outcome=shipped    charges=1 recovery=0.4s ledger=[reserve:temporal-app-link-blackhole-2000-r2, charge:temporal-app-link-blackhole-2000-r2, ship:temporal-app-link-blackhole-2000-r2]
+OBSERVED Temporal store-link-cut                2000ms outcome=shipped    charges=1 recovery=2.0s ledger=[reserve:temporal-store-link-cut-2000-r2, charge:temporal-store-link-cut-2000-r2, ship:temporal-store-link-cut-2000-r2]
+OBSERVED Temporal store-link-blackhole          2000ms outcome=shipped    charges=1 recovery=0.1s ledger=[reserve:temporal-store-link-blackhole-2000-r2, charge:temporal-store-link-blackhole-2000-r2, ship:temporal-store-link-blackhole-2000-r2]
+OBSERVED Temporal worker-crash                 10000ms outcome=shipped    charges=2 recovery=6.3s ledger=[reserve:temporal-worker-crash-10000-r2, charge:temporal-worker-crash-10000-r2, charge:temporal-worker-crash-10000-r2, ship:temporal-worker-crash-10000-r2]
+OBSERVED Temporal engine-restart               10000ms outcome=shipped    charges=2 recovery=3.5s ledger=[reserve:temporal-engine-restart-10000-r2, charge:temporal-engine-restart-10000-r2, charge:temporal-engine-restart-10000-r2, ship:temporal-engine-restart-10000-r2]
+OBSERVED Temporal engine-restart-done-during   10000ms outcome=shipped    charges=2 recovery=15.5s ledger=[reserve:temporal-engine-restart-done-during-10000-r2, charge:temporal-engine-restart-done-during-10000-r2, charge:temporal-engine-restart-done-during-10000-r2, ship:temporal-engine-restart-done-during-10000-r2]
+OBSERVED Temporal app-link-cut                 10000ms outcome=shipped    charges=2 recovery=15.1s ledger=[reserve:temporal-app-link-cut-10000-r2, charge:temporal-app-link-cut-10000-r2, charge:temporal-app-link-cut-10000-r2, ship:temporal-app-link-cut-10000-r2]
+OBSERVED Temporal app-link-blackhole           10000ms outcome=shipped    charges=2 recovery=1.1s ledger=[reserve:temporal-app-link-blackhole-10000-r2, charge:temporal-app-link-blackhole-10000-r2, charge:temporal-app-link-blackhole-10000-r2, ship:temporal-app-link-blackhole-10000-r2]
+OBSERVED Temporal store-link-cut               10000ms outcome=shipped    charges=2 recovery=5.3s ledger=[reserve:temporal-store-link-cut-10000-r2, charge:temporal-store-link-cut-10000-r2, charge:temporal-store-link-cut-10000-r2, ship:temporal-store-link-cut-10000-r2]
+OBSERVED Temporal store-link-blackhole         10000ms outcome=shipped    charges=1 recovery=1.6s ledger=[reserve:temporal-store-link-blackhole-10000-r2, charge:temporal-store-link-blackhole-10000-r2, ship:temporal-store-link-blackhole-10000-r2]
+[ERROR] Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 838.1 s <<< FAILURE! -- in com.wolinski.chaos.ExploreTest
+[ERROR] com.wolinski.chaos.ExploreTest.observe(String)[1] -- Time elapsed: 60.18 s <<< ERROR!
+io.grpc.StatusRuntimeException: FAILED_PRECONDITION: failed to create workflow instance: no workflow worker is connected for app 'orders' (the app must be running with its workflow worker registered with its Dapr sidecar before workflows can be started, raised, terminated, purged or waited on; retry once it has connected): failed to lookup actor: api error: code = FailedPrecondition desc = did not find address for actor 'dapr.internal.default.orders.workflow/dapr-app-link-cut-2000-r0'
+	at io.grpc.stub.ClientCalls.toStatusRuntimeException(ClientCalls.java:368)
+	at io.grpc.stub.ClientCalls.getUnchecked(ClientCalls.java:349)
+	at io.grpc.stub.ClientCalls.blockingUnaryCall(ClientCalls.java:174)
+	at io.dapr.durabletask.implementation.protobuf.TaskHubSidecarServiceGrpc$TaskHubSidecarServiceBlockingStub.startInstance(TaskHubSidecarServiceGrpc.java:1170)
+	at io.dapr.durabletask.DurableTaskGrpcClient.scheduleNewOrchestrationInstance(DurableTaskGrpcClient.java:237)
+	at io.dapr.durabletask.DurableTaskClient.scheduleNewOrchestrationInstance(DurableTaskClient.java:84)
+	at io.dapr.workflows.client.DaprWorkflowClient.lambda$scheduleNewWorkflow$2(DaprWorkflowClient.java:188)
+	at io.dapr.workflows.client.DaprWorkflowClient.mapAlreadyExists(DaprWorkflowClient.java:749)
+	at io.dapr.workflows.client.DaprWorkflowClient.scheduleNewWorkflow(DaprWorkflowClient.java:188)
+	at io.dapr.workflows.client.DaprWorkflowClient.scheduleNewWorkflow(DaprWorkflowClient.java:174)
+	at com.wolinski.chaos.DaprEngine.startSaga(DaprEngine.java:59)
+	at com.wolinski.chaos.ExploreTest.observe(ExploreTest.java:68)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   ExploreTest.observe:68 » StatusRuntime FAILED_PRECONDITION: failed to create workflow instance: no workflow worker is connected for app 'orders' (the app must be running with its workflow worker registered with its Dapr sidecar before workflows can be started, raised, terminated, purged or waited on; retry once it has connected): failed to lookup actor: api error: code = FailedPrecondition desc = did not find address for actor 'dapr.internal.default.orders.workflow/dapr-app-link-cut-2000-r0'
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14:09 min
+[INFO] Finished at: 2026-11-19T12:37:48Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.6.1:test (default-test) on project dapr-vs-temporal-workflow-chaos: 
+[ERROR] 
+[ERROR] See /src/target/surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

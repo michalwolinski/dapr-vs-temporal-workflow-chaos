@@ -1,0 +1,25 @@
+RESULT Temporal temporal-blip                        Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.430834501]
+RESULT Dapr     dapr-hung                            Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.055633959]
+RESULT Temporal temporal-hung                        Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.206450584]
+RESULT Dapr     dapr-blip                            Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.042193293]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 77.54 s -- in com.wolinski.chaos.ChaosTest
+RESULT Temporal temporal-blip                        Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.365996668]
+RESULT Dapr     dapr-hung                            Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.047287583]
+RESULT Temporal temporal-hung                        Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.334632958]
+RESULT Dapr     dapr-blip                            Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.030383836]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 78.11 s -- in com.wolinski.chaos.ChaosTest
+RESULT Temporal temporal-blip                        Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.300223626]
+RESULT Dapr     dapr-hung                            Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.074711084]
+RESULT Temporal temporal-hung                        Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.211249126]
+RESULT Dapr     dapr-blip                            Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.027375127]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 79.02 s -- in com.wolinski.chaos.ChaosTest
+RESULT Temporal temporal-blip                        Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.367518126]
+RESULT Dapr     dapr-hung                            Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.05989275]
+RESULT Temporal temporal-hung                        Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.266274]
+RESULT Dapr     dapr-blip                            Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.043590127]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 77.01 s -- in com.wolinski.chaos.ChaosTest
+RESULT Temporal temporal-blip                        Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.584695084]
+RESULT Dapr     dapr-hung                            Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.088697792]
+RESULT Temporal temporal-hung                        Result[outcome=FAILED, charges=3, refunds=0, recoverySeconds=0.25421625]
+RESULT Dapr     dapr-blip                            Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=5.042215877]
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 78.56 s -- in com.wolinski.chaos.ChaosTest

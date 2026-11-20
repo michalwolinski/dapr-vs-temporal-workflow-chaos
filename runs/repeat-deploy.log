@@ -1,0 +1,9 @@
+RESULT Dapr     dapr-deploy                          Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=0]
+RESULT Temporal temporal-deploy                      Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.23 s -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-deploy                          Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=0]
+RESULT Temporal temporal-deploy                      Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.00 s -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-deploy                          Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=0]
+RESULT Temporal temporal-deploy                      Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.90 s -- in com.wolinski.chaos.ChaosTest

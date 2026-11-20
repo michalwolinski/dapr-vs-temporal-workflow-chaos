@@ -1,0 +1,30 @@
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.114857584]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.683707833]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.180101626]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.059204043]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.80 s -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.122699458]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.649725167]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.057217292]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=3.84031371]
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 38.77 s <<< FAILURE! -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.074531667]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.669996001]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.128955834]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.104658208]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.54 s -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.087225541]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.426500751]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=2.106914084]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=1.633820751]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 37.03 s -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.096590209]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.614620834]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.068077916]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.089736792]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.65 s -- in com.wolinski.chaos.ChaosTest
+RESULT Dapr     dapr-store-cut                       Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.08114575]
+RESULT Temporal temporal-store-cut                   Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.527692834]
+RESULT Dapr     dapr-store-blackhole                 Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=0.112720375]
+RESULT Temporal temporal-store-blackhole             Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=3.918081335]
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 36.33 s <<< FAILURE! -- in com.wolinski.chaos.ChaosTest

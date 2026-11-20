@@ -1,0 +1,101 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< com.wolinski:dapr-vs-temporal-workflow-chaos >------------
+[INFO] Building dapr-vs-temporal-workflow-chaos 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] skip non existing resourceDirectory /src/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 15 source files with javac [debug release 25] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 16 source files with javac [debug release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.wolinski.chaos.CrashHistoryProbeTest
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/root/.m2/repository/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by com.google.protobuf.UnsafeUtil$MemoryAccessor (file:/root/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.protobuf.UnsafeUtil$MemoryAccessor
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+RESULT Temporal probe-plain-crash                    Result[outcome=shipped, charges=2, refunds=0, recoverySeconds=9.439164546]
+HISTORY probe-plain-crash        1 WORKFLOW_EXECUTION_STARTED         +    0.0 ms
+HISTORY probe-plain-crash        2 WORKFLOW_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-plain-crash        3 WORKFLOW_TASK_STARTED              + 1007.3 ms
+HISTORY probe-plain-crash        4 WORKFLOW_TASK_COMPLETED            +  729.7 ms
+HISTORY probe-plain-crash        5 ACTIVITY_TASK_SCHEDULED            +    0.2 ms
+HISTORY probe-plain-crash        6 ACTIVITY_TASK_STARTED              +    0.3 ms
+HISTORY probe-plain-crash        7 ACTIVITY_TASK_COMPLETED            +   39.4 ms
+HISTORY probe-plain-crash        8 WORKFLOW_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-plain-crash        9 WORKFLOW_TASK_STARTED              +    7.1 ms
+HISTORY probe-plain-crash       10 WORKFLOW_TASK_COMPLETED            +   40.4 ms
+HISTORY probe-plain-crash       11 ACTIVITY_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-plain-crash       12 ACTIVITY_TASK_STARTED              + 5918.2 ms
+HISTORY probe-plain-crash       13 ACTIVITY_TASK_COMPLETED            +  344.6 ms
+HISTORY probe-plain-crash       14 WORKFLOW_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-plain-crash       15 WORKFLOW_TASK_TIMED_OUT            + 5002.7 ms TIMEOUT_TYPE_SCHEDULE_TO_START
+HISTORY probe-plain-crash       16 WORKFLOW_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-plain-crash       17 WORKFLOW_TASK_STARTED              +    7.9 ms
+HISTORY probe-plain-crash       18 WORKFLOW_TASK_COMPLETED            +  119.0 ms
+HISTORY probe-plain-crash       19 ACTIVITY_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-plain-crash       20 ACTIVITY_TASK_STARTED              +    0.0 ms
+HISTORY probe-plain-crash       21 ACTIVITY_TASK_COMPLETED            +   17.7 ms
+HISTORY probe-plain-crash       22 WORKFLOW_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-plain-crash       23 WORKFLOW_TASK_STARTED              +    8.7 ms
+HISTORY probe-plain-crash       24 WORKFLOW_TASK_COMPLETED            +   18.7 ms
+HISTORY probe-plain-crash       25 WORKFLOW_EXECUTION_COMPLETED       +    0.0 ms
+RESULT Temporal probe-heartbeat-crash                Result[outcome=shipped, charges=1, refunds=0, recoverySeconds=6.628784045]
+HISTORY probe-heartbeat-crash    1 WORKFLOW_EXECUTION_STARTED         +    0.0 ms
+HISTORY probe-heartbeat-crash    2 WORKFLOW_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-heartbeat-crash    3 WORKFLOW_TASK_STARTED              + 1078.6 ms
+HISTORY probe-heartbeat-crash    4 WORKFLOW_TASK_COMPLETED            +  430.6 ms
+HISTORY probe-heartbeat-crash    5 ACTIVITY_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-heartbeat-crash    6 ACTIVITY_TASK_STARTED              +    0.0 ms
+HISTORY probe-heartbeat-crash    7 ACTIVITY_TASK_COMPLETED            +   36.2 ms
+HISTORY probe-heartbeat-crash    8 WORKFLOW_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-heartbeat-crash    9 WORKFLOW_TASK_STARTED              +   15.5 ms
+HISTORY probe-heartbeat-crash   10 WORKFLOW_TASK_COMPLETED            +   38.2 ms
+HISTORY probe-heartbeat-crash   11 ACTIVITY_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-heartbeat-crash   12 ACTIVITY_TASK_STARTED              + 3102.2 ms
+HISTORY probe-heartbeat-crash   13 ACTIVITY_TASK_COMPLETED            +  404.4 ms
+HISTORY probe-heartbeat-crash   14 WORKFLOW_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-heartbeat-crash   15 WORKFLOW_TASK_TIMED_OUT            + 5006.5 ms TIMEOUT_TYPE_SCHEDULE_TO_START
+HISTORY probe-heartbeat-crash   16 WORKFLOW_TASK_SCHEDULED            +    0.1 ms
+HISTORY probe-heartbeat-crash   17 WORKFLOW_TASK_STARTED              +   12.3 ms
+HISTORY probe-heartbeat-crash   18 WORKFLOW_TASK_COMPLETED            +  103.3 ms
+HISTORY probe-heartbeat-crash   19 ACTIVITY_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-heartbeat-crash   20 ACTIVITY_TASK_STARTED              +    0.0 ms
+HISTORY probe-heartbeat-crash   21 ACTIVITY_TASK_COMPLETED            +   11.0 ms
+HISTORY probe-heartbeat-crash   22 WORKFLOW_TASK_SCHEDULED            +    0.0 ms
+HISTORY probe-heartbeat-crash   23 WORKFLOW_TASK_STARTED              +    7.1 ms
+HISTORY probe-heartbeat-crash   24 WORKFLOW_TASK_COMPLETED            +   11.5 ms
+HISTORY probe-heartbeat-crash   25 WORKFLOW_EXECUTION_COMPLETED       +    0.1 ms
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 41.99 s -- in com.wolinski.chaos.CrashHistoryProbeTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  46.201 s
+[INFO] Finished at: 2026-11-19T14:12:41Z
+[INFO] ------------------------------------------------------------------------

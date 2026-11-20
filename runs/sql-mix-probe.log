@@ -1,0 +1,103 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------< com.wolinski:dapr-vs-temporal-workflow-chaos >------------
+[INFO] Building dapr-vs-temporal-workflow-chaos 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] skip non existing resourceDirectory /src/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 15 source files with javac [debug release 25] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 16 source files with javac [debug release 25] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.6.1:test (default-test) @ dapr-vs-temporal-workflow-chaos ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.wolinski.chaos.SqlMixProbeTest
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.jna.Native in an unnamed module (file:/root/.m2/repository/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by com.google.protobuf.UnsafeUtil$MemoryAccessor (file:/root/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.protobuf.UnsafeUtil$MemoryAccessor
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+SQLMIX delay=0ms took=2794ms per-step calls | query
+3.10 | COMMIT
+3.10 | BEGIN READ WRITE
+3.08 | INSERT INTO history_node (shard_id, tree_id, branch_id, node_id, prev_txn_id, txn_id, data, data_encoding) VAL
+3.08 | SELECT range_id FROM shards WHERE shard_id = $1 FOR SHARE
+3.05 | SELECT shard_id, namespace_id, workflow_id, run_id, create_request_id, state, status, start_time, last_write_v
+3.05 | UPDATE current_executions SET run_id = $1, create_request_id = $2, state = $3, status = $4, start_time = $5, l
+3.05 | SELECT db_record_version, next_event_id FROM executions WHERE shard_id = $1 AND namespace_id = $2 AND workflow
+3.05 | UPDATE executions SET db_record_version = $1, next_event_id = $2, last_write_version = $3, data = $4, data_enc
+3.05 | INSERT INTO timer_tasks (shard_id, visibility_timestamp, task_id, data, data_encoding) VALUES ($1, $2, $3, $4,
+1.05 | SELECT node_id, prev_txn_id, txn_id, data, data_encoding FROM history_node WHERE shard_id = $1 AND tree_id = $
+1.05 | INSERT INTO transfer_tasks(shard_id, task_id, data, data_encoding) VALUES($1, $2, $3, $4)
+1.05 | SELECT task_id, data, data_encoding FROM transfer_tasks WHERE shard_id = $1 AND task_id >= $2 AND task_id < $3
+1.00 | INSERT INTO activity_info_maps (shard_id, namespace_id, workflow_id, run_id, schedule_id, data,data_encoding) 
+1.00 | DELETE FROM activity_info_maps WHERE shard_id = $1 AND namespace_id = $2 AND workflow_id = $3 AND run_id = $4 
+0.25 | SELECT data, data_encoding, version FROM task_queue_user_data WHERE namespace_id = $1 AND task_queue_name = $2
+0.10 | SELECT task_id, data, data_encoding FROM visibility_tasks WHERE shard_id = $1 AND task_id >= $2 AND task_id < 
+0.10 | SELECT id, name, is_global, data, data_encoding, notification_version FROM namespaces WHERE partition_id=$1 OR
+0.10 | INSERT INTO visibility_tasks(shard_id, task_id, data, data_encoding) VALUES($1, $2, $3, $4)
+0.08 | INSERT INTO executions_visibility (namespace_id, run_id, workflow_type_name, workflow_id, start_time, executio
+0.03 | SELECT shard_id, namespace_id, workflow_id, run_id, create_request_id, state, status, start_time, last_write_v
+0.03 | INSERT INTO current_executions (shard_id, namespace_id, workflow_id, run_id, create_request_id, state, status,
+0.03 | SELECT chasm_path, metadata,metadata_encoding,data,data_encoding FROM chasm_node_maps WHERE shard_id = $1 AND 
+0.03 | SELECT ce.shard_id, ce.namespace_id, ce.workflow_id, ce.run_id, ce.create_request_id, ce.state, ce.status, ce.
+0.03 | INSERT INTO executions(shard_id, namespace_id, workflow_id, run_id, next_event_id, last_write_version, data, d
+0.03 | SELECT timer_id, data,data_encoding FROM timer_info_maps WHERE shard_id = $1 AND namespace_id = $2 AND workflo
+
+SQLMIX delay=5ms took=33208ms per-step calls | query
+3.30 | COMMIT
+3.30 | BEGIN READ WRITE
+3.08 | INSERT INTO history_node (shard_id, tree_id, branch_id, node_id, prev_txn_id, txn_id, data, data_encoding) VAL
+3.08 | SELECT range_id FROM shards WHERE shard_id = $1 FOR SHARE
+3.05 | INSERT INTO timer_tasks (shard_id, visibility_timestamp, task_id, data, data_encoding) VALUES ($1, $2, $3, $4,
+3.05 | SELECT shard_id, namespace_id, workflow_id, run_id, create_request_id, state, status, start_time, last_write_v
+3.05 | UPDATE executions SET db_record_version = $1, next_event_id = $2, last_write_version = $3, data = $4, data_enc
+3.05 | SELECT db_record_version, next_event_id FROM executions WHERE shard_id = $1 AND namespace_id = $2 AND workflow
+3.05 | UPDATE current_executions SET run_id = $1, create_request_id = $2, state = $3, status = $4, start_time = $5, l
+1.70 | SELECT visibility_timestamp, task_id, data, data_encoding FROM timer_tasks WHERE shard_id = $1 AND ((visibilit
+1.70 | SELECT id, name, is_global, data, data_encoding, notification_version FROM namespaces WHERE partition_id=$1 OR
+1.05 | SELECT node_id, prev_txn_id, txn_id, data, data_encoding FROM history_node WHERE shard_id = $1 AND tree_id = $
+1.05 | SELECT task_id, data, data_encoding FROM transfer_tasks WHERE shard_id = $1 AND task_id >= $2 AND task_id < $3
+1.05 | INSERT INTO transfer_tasks(shard_id, task_id, data, data_encoding) VALUES($1, $2, $3, $4)
+1.00 | DELETE FROM activity_info_maps WHERE shard_id = $1 AND namespace_id = $2 AND workflow_id = $3 AND run_id = $4 
+1.00 | INSERT INTO activity_info_maps (shard_id, namespace_id, workflow_id, run_id, schedule_id, data,data_encoding) 
+0.30 | INSERT INTO cluster_membership (membership_partition, host_id, rpc_address, rpc_port, role, session_start, las
+0.10 | SELECT version FROM nexus_endpoints_partition_status
+0.10 | DELETE FROM history_immediate_tasks WHERE shard_id = $1 AND category_id = $2 AND task_id >= $3 AND task_id < $
+0.10 | DELETE FROM timer_tasks WHERE shard_id = $1 AND visibility_timestamp >= $2 AND visibility_timestamp < $3
+0.10 | DELETE FROM visibility_tasks WHERE shard_id = $1 AND task_id >= $2 AND task_id < $3
+0.10 | UPDATE shards SET range_id = $1, data = $2, data_encoding = $3 WHERE shard_id = $4
+0.10 | DELETE FROM transfer_tasks WHERE shard_id = $1 AND task_id >= $2 AND task_id < $3
+0.10 | SELECT range_id FROM shards WHERE shard_id = $1 FOR UPDATE
+0.10 | SELECT task_id, data, data_encoding FROM visibility_tasks WHERE shard_id = $1 AND task_id >= $2 AND task_id < 
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 59.67 s -- in com.wolinski.chaos.SqlMixProbeTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:03 min
+[INFO] Finished at: 2026-11-19T14:18:39Z
+[INFO] ------------------------------------------------------------------------
